@@ -1,7 +1,6 @@
-
 # Turkish Emotion Classifier
 
-A simple Natural Language Processing (NLP) project that classifies Turkish text into emotions like **happy**, **sad**, **angry**, and **neutral**.  
+A complete **Natural Language Processing (NLP)** project that classifies Turkish text into emotions such as **happy**, **sadness**, **anger**, **fear**, **disgust**, **surprise**, and **ambiguous**.  
 The model is trained on a labeled dataset and deployed with a lightweight **Streamlit** web application for real-time prediction.
 
 ---
@@ -9,92 +8,112 @@ The model is trained on a labeled dataset and deployed with a lightweight **Stre
 ## Project Structure
 
 ```
-/turkish-text-classifier
-  ├── TurkishEmotionClassifier.ipynb
-  ├── data/
-  │   ├──TREMODATA.xml
-  │   └── paper_related_to_TREMO_dateset.pdf
-  ├── app/
-  │   └── app.py
-  ├── model.pkl
-  ├── vectorizer.pkl
-  ├── README.md
-  ├── requirements.txt
+turkish_emotion_classifier/
+├── TurkishEmotionClassifier_SingleLabel.ipynb
+├── models/
+│   └── emotion_classifier_pipe_lr.pkl
+├── app.py
+├── requirements.txt
+├── README.md
+├── data/
+│   ├── TREMODATA.xml
+│   └── paper_related_to_TREMO_dataset.pdf
 ```
 
 ---
 
-## How It Works
+## Pipeline
 
-1. **Data Preprocessing**  
-   - Lowercasing text
-   - Removing punctuation
-   - Tokenizing words
+1. **Data Loading**  
+   Parse and load XML data from the **TREMO** dataset.
 
-2. **Feature Extraction**  
-   - Convert text into numerical features using **CountVectorizer**.
+2. **Data Preprocessing**  
+   - Lowercasing text  
+   - Removing punctuation (using `nfx` + manual cleaning)  
+   - Removing stopwords  
+   - Removing numbers and extra whitespace
 
-3. **Model Training**  
-   - Train a **Logistic Regression** classifier on the extracted features.
+3. **Feature Extraction**  
+   Convert cleaned text into numerical features using **CountVectorizer**.
 
-4. **Model Evaluation**  
-   - Evaluate using accuracy, precision, recall, and F1-score.
+4. **Model Training**  
+   Train a **Logistic Regression** classifier to predict emotions.
 
-5. **Web App Deployment**  
-   - Create an interactive user interface with **Streamlit** where users can input Turkish sentences and receive emotion predictions.
+5. **Model Evaluation**  
+   Evaluate using Confusion Matrix, Accuracy, Precision, Recall, and F1-score.  
+   Achieved **~82% accuracy** with strong performance across major emotion classes.
+
+6. **Web App Deployment**  
+   Built a **Streamlit** app where users can input Turkish text and receive real-time emotion predictions with probability scores.
 
 ---
 
-## Technologies Used
+## Libraries
 
 - Python
 - Scikit-learn
-- NLTK
 - Streamlit
+- NLTK
 - Pandas
-- Machine Learning (Logistic Regression)
-- Natural Language Processing (NLP)
+- Matplotlib
+- Seaborn
+- Neattext
 
 ---
 
 ## Results
 
-- **Accuracy**: 
-- **Live Demo**:
+- **Accuracy**: ~82% on the test set
+- **Macro F1-Score**: ~76%
+- **Observations**:
+  - Strong performance on main emotions such as **Happy**, **Sadness**, **Fear**, and **Disgust**.
+  - **Ambiguous** class remains challenging.
+  - Some sentences express multiple emotions; however, the model was trained for **single-label classification**.
+
+---
+
+##  Live Demo
+
+ **[Live Demo](https://your-app-link.streamlit.app/)**
+
+
 
 ---
 
 ## Installation
 
-1. Clone the repository:
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/turkish-text-classifier.git
-   cd turkish-text-classifier
+   git clone https://github.com/isikaykarakus/EmotionClassifier.git
+   cd EmotionClassifier
    ```
 
-2. Install required packages:
+2. **Install required packages:**
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Run the Streamlit app:
+3. **Run the Streamlit app:**
    ```bash
-   streamlit run app/app.py
+   streamlit run app.py
    ```
+
+The app will open automatically in your browser.
 
 ---
 
 ## Future Improvements
 
-- Fine-tune a deep learning model (e.g., BERTurk).
-- Expand the dataset with more labeled examples.
-- Add more emotion classes (like Fear, Disgust, Surprise).
+- Implement **multi-label classification** to handle overlapping emotions.
+- Fine-tune with advanced models like **BERTurk** or **XLM-Roberta**.
+- Expand the dataset with more nuanced emotion labels.
+- Deploy the app online using **Streamlit Cloud** for public access.
 
 ---
 
 ## Acknowledgments
 
-- **TREMO Dataset** ([Kaggle Link](https://www.kaggle.com/datasets/mansuralp/tremo)) for providing Turkish emotional text data.
+- **[TREMO Dataset](https://www.kaggle.com/datasets/mansuralp/tremo)** for providing Turkish emotional text data.
 
 ---
 
@@ -102,4 +121,4 @@ The model is trained on a labeled dataset and deployed with a lightweight **Stre
 
 **Işıkay Karakuş**  
 - [GitHub](https://github.com/isikaykarakus)  
-- [LinkedIn](https://www.linkedin.com/in/isikaykarakus/)  
+- [LinkedIn](https://www.linkedin.com/in/isikaykarakus/)
