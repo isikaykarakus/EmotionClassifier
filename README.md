@@ -1,19 +1,19 @@
 
-# 📚 Turkish Emotion Classifier
+# Turkish Emotion Classifier
 
 A simple Natural Language Processing (NLP) project that classifies Turkish text into emotions like **happy**, **sad**, **angry**, and **neutral**.  
 The model is trained on a labeled dataset and deployed with a lightweight **Streamlit** web application for real-time prediction.
 
 ---
 
-## 🛠️ Project Structure
+## Project Structure
 
 ```
 /turkish-text-classifier
+  ├── TurkishEmotionClassifier.ipynb
   ├── data/
-  │   └── dataset.csv
-  ├── notebooks/
-  │   └── eda.ipynb
+  │   ├──TREMODATA.xml
+  │   └── paper_related_to_TREMO_dateset.pdf
   ├── app/
   │   └── app.py
   ├── model.pkl
@@ -24,7 +24,7 @@ The model is trained on a labeled dataset and deployed with a lightweight **Stre
 
 ---
 
-## 🚀 How It Works
+## How It Works
 
 1. **Data Preprocessing**  
    - Lowercasing text
@@ -45,7 +45,7 @@ The model is trained on a labeled dataset and deployed with a lightweight **Stre
 
 ---
 
-## 🧠 Technologies Used
+## Technologies Used
 
 - Python
 - Scikit-learn
@@ -57,14 +57,14 @@ The model is trained on a labeled dataset and deployed with a lightweight **Stre
 
 ---
 
-## 📈 Results
+## Results
 
 - **Accuracy**: Achieved over 85% test accuracy on the validation set.
 - **Live Demo**: Users can classify their own Turkish sentences into emotional categories instantly.
 
 ---
 
-## 🎯 Installation
+## Installation
 
 1. Clone the repository:
    ```bash
@@ -84,7 +84,7 @@ The model is trained on a labeled dataset and deployed with a lightweight **Stre
 
 ---
 
-## ✨ Future Improvements
+## Future Improvements
 
 - Fine-tune a deep learning model (e.g., BERTurk).
 - Expand the dataset with more labeled examples.
@@ -92,13 +92,13 @@ The model is trained on a labeled dataset and deployed with a lightweight **Stre
 
 ---
 
-## 🤝 Acknowledgments
+## Acknowledgments
 
 - **TREMO Dataset** ([Kaggle Link](https://www.kaggle.com/datasets/mansuralp/tremo)) for providing Turkish emotional text data.
 
 ---
 
-## 🖤 Author
+## Author
 
 **Işıkay Karakuş**  
 - [GitHub](https://github.com/isikaykarakus)  
