@@ -59,8 +59,8 @@ The model is trained on a labeled dataset and deployed with a lightweight **Stre
 
 ## Results
 
-- **Accuracy**: Achieved over 85% test accuracy on the validation set.
-- **Live Demo**: Users can classify their own Turkish sentences into emotional categories instantly.
+- **Accuracy**: 
+- **Live Demo**:
 
 ---
 
