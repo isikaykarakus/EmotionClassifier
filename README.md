@@ -50,14 +50,15 @@ turkish_emotion_classifier/
 
 ## Libraries
 
-- Python
-- Scikit-learn
-- Streamlit
-- NLTK
-- Pandas
-- Matplotlib
-- Seaborn
-- Neattext
+- **Python** >= 3.9
+- **Scikit-learn** 1.2.2
+- **Streamlit** 1.22.0
+- **NLTK** 3.8.1
+- **Pandas** 1.5.3
+- **Matplotlib** 3.7.1
+- **Seaborn** 0.12.2
+- **Neattext** 0.1.3
+- **Joblib** 1.2.0
 
 ---
 
