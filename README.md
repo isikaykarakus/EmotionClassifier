@@ -1,6 +1,6 @@
 # Turkish Emotion Classifier
 
-A complete **Natural Language Processing (NLP)** project that classifies Turkish text into emotions such as **happy**, **sadness**, **anger**, **fear**, **disgust**, **surprise**, and **ambiguous**.  
+**Natural Language Processing (NLP)** project that classifies Turkish text into emotions such as **happy**, **sadness**, **anger**, **fear**, **disgust**, **surprise**, and **ambiguous**.  
 The model is trained on a labeled dataset and deployed with a lightweight **Streamlit** web application for real-time prediction.
 
 ---
