@@ -110,7 +110,7 @@ The app will open automatically in your browser.
 - Implement **multi-label classification** to handle overlapping emotions.
 - Fine-tune with advanced models like **BERTurk** or **XLM-Roberta**.
 - Expand the dataset with more nuanced emotion labels.
-- Deploy the app online using **Streamlit Cloud** for public access.
+
 
 ---
 
