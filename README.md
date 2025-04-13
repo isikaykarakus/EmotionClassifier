@@ -75,9 +75,7 @@ turkish_emotion_classifier/
 
 ##  Live Demo
 
- **[Live Demo](https://your-app-link.streamlit.app/)**
-
-
+ **[Click Here](https://turkishemotionclassifier-isikaykarakus.streamlit.app/)**
 
 ---
 
