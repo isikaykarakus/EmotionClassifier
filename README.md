@@ -12,6 +12,8 @@ turkish_emotion_classifier/
 ├── TurkishEmotionClassifier_SingleLabel.ipynb
 ├── models/
 │   └── emotion_classifier_pipe_lr.pkl
+├── images/
+│   └── DemoPicture.png
 ├── app.py
 ├── requirements.txt
 ├── README.md
