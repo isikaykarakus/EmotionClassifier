@@ -79,7 +79,7 @@ turkish_emotion_classifier/
 
 ![App Screenshot](https://github.com/isikaykarakus/EmotionClassifier/blob/main/images/DemoPicture.png)
 
- **[Click Here](https://turkishemotionclassifier-isikaykarakus.streamlit.app/)**
+ **[Click Here to Try!](https://turkishemotionclassifier-isikaykarakus.streamlit.app/)**
 
 ---
 
